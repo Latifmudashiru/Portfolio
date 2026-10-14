@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project</title>
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <strong data-site="name">Deny Mudashiru</strong>
+        <span data-site="tagline">Software Engineer / Location</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Index</a>
+        <a href="index.html#university">University</a>
+        <a href="index.html#client">Client</a>
+        <a href="index.html#side">Side</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">◐</button>
+      </nav>
+    </header>
+
+    <main data-project></main>
+    <noscript><p>This page needs JavaScript to load the project.</p></noscript>
+
+    <footer class="site-footer">
+      <p>Available for software engineering work.</p>
+      <a data-site="email" data-site-email href="#"></a>
+    </footer>
+  </div>
+
+  <script src="assets/projects.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

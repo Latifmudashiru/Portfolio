@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deny Mudashiru - Portfolio</title>
+  <meta name="description" content="University, client and side projects.">
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <strong data-site="name">Deny Mudashiru</strong>
+        <span data-site="tagline">Software Engineer / Location</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Index</a>
+        <a href="#university">University</a>
+        <a href="#client">Client</a>
+        <a href="#side">Side</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">◐</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Project ledger</p>
+          <h1 data-site="name">Deny Mudashiru</h1>
+          <p class="lede" data-site="intro"></p>
+          <div class="actions">
+            <a class="btn" href="#client">Selected work</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <dl class="meta-box">
+          <div><dt>Document:</dt><dd>INDEX</dd></div>
+          <div><dt>Issued:</dt><dd data-site="issued"></dd></div>
+          <div><dt>Status:</dt><dd data-site="status"></dd></div>
+        </dl>
+      </section>
+
+      <div class="index-wrap">
+        <table class="index">
+          <caption>What's in the ledger</caption>
+          <thead>
+            <tr><th scope="col">No.</th><th scope="col">Section</th><th scope="col">Entries</th></tr>
+          </thead>
+          <tbody data-index></tbody>
+        </table>
+      </div>
+
+      <div data-work></div>
+      <noscript><p>The project lists on this page need JavaScript to load.</p></noscript>
+
+      <section class="block" id="contact">
+        <div class="block-head">
+          <h2>Contact</h2>
+          <p>Get in touch anytime.</p>
+        </div>
+        <dl class="kv">
+          <div>
+            <dt>Email</dt>
+            <dd><a data-site="email" data-site-email href="#"></a></dd>
+          </div>
+          <div data-optional>
+            <dt>Phone</dt>
+            <dd><a data-site="phone" data-site-tel href="#"></a></dd>
+          </div>
+          <div data-optional>
+            <dt>GitHub</dt>
+            <dd><a data-site-link="github" data-show-url href="#" target="_blank" rel="noopener">GitHub</a></dd>
+          </div>
+          <div data-optional>
+            <dt>LinkedIn</dt>
+            <dd><a data-site-link="linkedin" data-show-url href="#" target="_blank" rel="noopener">LinkedIn</a></dd>
+          </div>
+          <div data-optional>
+            <dt>CV</dt>
+            <dd><a data-site-link="cv" href="#">Download CV</a></dd>
+          </div>
+          <div data-optional>
+            <dt>Call</dt>
+            <dd><a data-site-link="booking" href="#">Book an intro call</a></dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Available for software engineering work.</p>
+      <a data-site="email" data-site-email href="#"></a>
+    </footer>
+  </div>
+
+  <script src="assets/projects.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
